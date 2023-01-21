@@ -8,7 +8,8 @@ function Feed() {
   async function getPosts() {
     const response = await fetch("https://dummyjson.com/posts");
     const data = await response.json();
-    console.log(data);
+    console.log(data.posts);
+    setPosts(data.posts);
   }
 
   useEffect(() => {
@@ -25,7 +26,15 @@ function Feed() {
 
         <button className="feed_add_photo">Add Photo</button>
       </div>
-      <FeedCard />
+
+      {posts?.map((value) => (
+        <FeedCard
+          image={value.userId}
+          name={value.userId}
+          tags={value.tags}
+          message={value.body}
+        />
+      ))}
     </div>
   );
 }
