@@ -31,8 +31,18 @@
 .icons {
     display: flex;
     align-items: center;
+    cursor: pointer;
 }
 
 .icons>p {
-    margin-left: 6px;
+    margin-left: 6px
+}
+
+.icons_container {
+    display: flex;
+    align-items: center;
+}
+
+.bookmark_icon {
+    margin-left: 10px;
 }
