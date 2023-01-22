@@ -27,3 +27,12 @@
 .tags {
     display: flex;
 }
+
+.icons {
+    display: flex;
+    align-items: center;
+}
+
+.icons>p {
+    margin-left: 6px;
+}

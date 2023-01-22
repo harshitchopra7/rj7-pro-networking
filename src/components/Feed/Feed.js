@@ -18,15 +18,18 @@ function Feed() {
   }, []);
 
   function addPosts() {
-    const copyArray = posts;
+    const copyArray = [...posts];
     copyArray.unshift({
       userId: 10,
       name: "Harshit",
       tags: ["HTML", "CSS"],
       body: input,
     });
+    setPosts(copyArray);
     setInput("");
   }
+
+  console.log(posts);
 
   return (
     <div className="feed_container">
@@ -50,6 +53,7 @@ function Feed() {
           name={value.name}
           tags={value.tags}
           message={value.body}
+          likeCount={value.reactions}
         />
       ))}
     </div>
