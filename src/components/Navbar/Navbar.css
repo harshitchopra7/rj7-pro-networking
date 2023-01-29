@@ -59,3 +59,31 @@
 .navbar_line {
     border: 0.5px solid lightgrey;
 }
+
+@media screen and (max-width: 1120px) {
+    .navbar_right>p {
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width: 1050px) {
+    .navbar {
+        display: flex;
+        flex-direction: column;
+        margin-top: 10px;
+    }
+
+    .navbar_right {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .navbar {
+        padding: 0;
+    }
+
+    .navbar_left>input {
+        width: 70%;
+    }
+}

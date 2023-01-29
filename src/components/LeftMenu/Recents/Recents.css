@@ -19,3 +19,15 @@
 .recents_tags_container>p {
     cursor: pointer;
 }
+
+@media screen and (max-width: 700px) {
+    .recents_container {
+        width: 160px;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .recents_container {
+        margin-left: 15px;
+    }
+}

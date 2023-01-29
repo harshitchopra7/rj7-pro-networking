@@ -17,3 +17,9 @@
     margin-top: 20px;
     cursor: pointer;
 }
+
+@media screen and (max-width: 900px) {
+    .right_menu_container {
+        display: none;
+    }
+}

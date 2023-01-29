@@ -45,3 +45,13 @@
 .user_details_stats_highlight {
     color: #0047ab;
 }
+
+@media screen and (max-width: 700px) {
+    .user_details_container {
+        width: 180px;
+    }
+
+    .user_details_background_image>img {
+        width: 180px;
+    }
+}
