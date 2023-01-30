@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "./Navbar.css";
 import { Link, useNavigate } from "react-router-dom";
 
-function Navbar() {
+function Navbar({ setIsLoggedIn }) {
   const navigate = useNavigate();
   const isAboutUsPage = window.location.href.includes("about-us");
   const isProfilePage = window.location.href.includes("profile");
@@ -22,7 +22,9 @@ function Navbar() {
           <p onClick={() => navigate("/about-us")}>About us</p>
           <p onClick={() => navigate("/profile")}>Profile</p>
           <p>Dark Mode</p>
-          {!isAboutUsPage && !isProfilePage && <button>Logout</button>}
+          {!isAboutUsPage && !isProfilePage && (
+            <button onClick={() => setIsLoggedIn(false)}>Logout</button>
+          )}
         </div>
       </div>
       <hr className="navbar_line" />
