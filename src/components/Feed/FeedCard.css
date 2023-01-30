@@ -46,3 +46,13 @@
 .bookmark_icon {
     margin-left: 10px;
 }
+
+.feed_card_image_container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.feed_card_image_container>img {
+    width: 90%;
+}

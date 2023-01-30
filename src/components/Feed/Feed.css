@@ -23,14 +23,15 @@
     justify-content: center;
 }
 
-.feed_add_input>input {
+.feed_add_input>div>input {
     height: 50px;
-    width: 70%;
+    width: 90%;
     border-radius: 30px;
     border: none;
     border: 1px solid lightgray;
     padding: 0 20px;
     margin-right: 20px;
+    margin-bottom: 20px;
 }
 
 .feed_add_input>button,
@@ -41,6 +42,7 @@
     cursor: pointer;
     color: #0047ab;
     font-weight: 600;
+    margin-left: 20px;
 }
 
 .feed_add_photo {
