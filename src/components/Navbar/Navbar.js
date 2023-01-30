@@ -7,6 +7,14 @@ function Navbar({ setIsLoggedIn }) {
   const isAboutUsPage = window.location.href.includes("about-us");
   const isProfilePage = window.location.href.includes("profile");
 
+  const value = localStorage.getItem("email");
+  console.log("value", value);
+
+  function logout() {
+    setIsLoggedIn(false);
+    localStorage.setItem("isUserLoggedIn", false);
+  }
+
   return (
     <div className={`navbar_container ${isAboutUsPage && "navbar_about_us"}`}>
       <div className="navbar">
@@ -23,7 +31,7 @@ function Navbar({ setIsLoggedIn }) {
           <p onClick={() => navigate("/profile")}>Profile</p>
           <p>Dark Mode</p>
           {!isAboutUsPage && !isProfilePage && (
-            <button onClick={() => setIsLoggedIn(false)}>Logout</button>
+            <button onClick={logout}>Logout</button>
           )}
         </div>
       </div>

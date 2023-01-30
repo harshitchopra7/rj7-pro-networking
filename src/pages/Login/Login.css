@@ -19,8 +19,18 @@
     padding: 0 10px;
 }
 
-.login_container>button {
+.login_container>button,
+.sign_up_button>button {
     margin-top: 30px;
     padding: 10px 20px;
     font-size: 16px;
+}
+
+.sign_up_button {
+    display: flex;
+    align-items: center;
+}
+
+.sign_up_button>p {
+    margin-right: 20px;
 }
