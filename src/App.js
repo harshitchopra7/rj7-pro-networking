@@ -9,7 +9,7 @@ import FeedDescriptionPage from "./pages/FeedDescriptionPage/FeedDescriptionPage
 import Login from "./pages/Login/Login";
 
 function App() {
-  const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const [isLoggedIn, setIsLoggedIn] = useState(true);
 
   return (
     <div className="App">

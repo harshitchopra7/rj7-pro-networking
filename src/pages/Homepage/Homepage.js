@@ -11,7 +11,7 @@ function Homepage() {
         "https://api.nytimes.com/svc/topstories/v2/arts.json?api-key=BHDozqdi551iHipEmfJLqcwnJUzOGkr8"
       );
       const data = await response.json();
-      console.log("data", data);
+      // console.log("data", data);
     }
     callApi();
   }, []);

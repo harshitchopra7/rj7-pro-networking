@@ -1,6 +1,8 @@
+import { Api } from "@mui/icons-material";
 import React, { useState, useEffect } from "react";
 import "./Feed.css";
 import FeedCard from "./FeedCard";
+import axios from "axios";
 
 function Feed() {
   const [posts, setPosts] = useState([]);
@@ -8,10 +10,38 @@ function Feed() {
   const [imageUrl, setImageUrl] = useState("");
 
   async function getPosts() {
-    const response = await fetch("https://dummyjson.com/posts");
-    const data = await response.json();
-    console.log(data.posts);
-    setPosts(data.posts);
+    // async and await api call ;
+    // error handling
+    // try {
+    // const response = await fetch("https://dummyjson.com/posts");
+    //   const data = await response.json();
+    //   console.log(data.posts);
+    //   setPosts(data.posts);
+    // } catch (error) {
+    //   console.log(error);
+    // }
+
+    // promise with error handling
+    // fetch("https://dummyjson.com/posts")
+    //   .then((response) => {
+    //     response.json();
+    //   })
+    //   .then((data) => {
+    //     console.log("response", data);
+    //     setPosts(data.posts);
+    //   })
+    //   .catch((e) => console.log(e));
+
+    axios
+      .get("https://dummyjson.com/posts")
+      .then((response) => {
+        response.json();
+      })
+      .then((data) => {
+        console.log("response", data);
+        setPosts(data.posts);
+      })
+      .catch((e) => console.log(e));
   }
 
   useEffect(() => {
@@ -32,8 +62,6 @@ function Feed() {
     setInput("");
     setImageUrl("");
   }
-
-  console.log(posts);
 
   return (
     <div className="feed_container">
