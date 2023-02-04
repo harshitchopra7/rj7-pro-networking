@@ -31,7 +31,9 @@ function Navbar({ setIsLoggedIn }) {
           <p onClick={() => navigate("/profile")}>Profile</p>
           <p>Dark Mode</p>
           {!isAboutUsPage && !isProfilePage && (
-            <button onClick={logout}>Logout</button>
+            <button onClick={logout} data-testid="navbar_logout">
+              Logout
+            </button>
           )}
         </div>
       </div>
