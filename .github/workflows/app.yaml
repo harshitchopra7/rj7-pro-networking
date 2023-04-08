@@ -25,5 +25,4 @@ jobs:
           BUILD: ${{ SECRETS.BUILD }}
         run: npm run build
       - name: Firebase Deploy
-        env:
         run: firebase deploy --only hosting:${{ secrets.FIREBASE_HOSTING }} -P ${{ secrets.FIREBASE_PROJECT_ID }}
